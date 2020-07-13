@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config build/webpack.prod.conf.js",
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
-    "dll": "webpack --config build/webpack.dll.conf.js"
+    "dll": "webpack --config build/webpack.dll.conf.js",
+    "start:server": "node server index.js"
   },
   "author": "parasha",
   "license": "MIT",
@@ -40,6 +41,11 @@
   "dependencies": {
     "axios": "^0.19.2",
     "element-ui": "^2.13.2",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.1.0",
+    "koa2-cors": "^2.0.6",
+    "store": "^2.0.12",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",
     "vuex": "^3.5.1"

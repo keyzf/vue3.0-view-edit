@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   devServer: {
     host: 'localhost',
     port: 8005,
-    https: true,
+    // https: true,
     open: true,
     hot: true,
     quiet: true,
