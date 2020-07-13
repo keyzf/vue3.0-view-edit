@@ -1,18 +1,12 @@
-const path = require('path');
+const resolve = require('./resolve');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//提取css到单独文件的插件
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 
-const resolve = (url) => path.resolve(__dirname, url);
-
 const optimization = require('./splitChunks')
 
 const config = {
-  // 入口
-  entry: {
-    main: resolve('../client/main.js'),
-  },
   output: {
     path: resolve('../dist'),
     filename: 'js/[name].[hash:8].js'
@@ -55,7 +49,7 @@ const config = {
       },
     ]
   },
-  optimization,
+  // optimization,
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({

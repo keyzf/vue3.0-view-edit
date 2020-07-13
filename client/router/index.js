@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Home from '../pages/home.vue';
+
 Vue.use(Router)
 
 const routes = [
-  
+  {
+    path: '/',
+    component: Home,
+  }
 ]
 
 function createRouter() {
@@ -18,4 +23,4 @@ function createRouter() {
   return router;
 }
 
-export default createRouter;
+export { createRouter };

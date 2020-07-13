@@ -1,6 +1,6 @@
 var merge = require('webpack-merge')
 
-const baseConfig = require('./webpack.base.conf');
+const baseConfig = require('./webpack.base.config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const CompressionPlugin = require('compression-webpack-plugin');
