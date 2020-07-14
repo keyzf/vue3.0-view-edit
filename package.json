@@ -4,10 +4,9 @@
   "description": "一个 vue 的管理后台",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config build/webpack.prod.config.js",
-    "dev": "webpack-dev-server --config build/webpack.dev.config.js",
-    "dll": "webpack --config build/webpack.dll.config.js",
+    "build:client": "webpack --config build/webpack.client.config.js",
     "build:server": "webpack --config build/webpack.server.config.js",
+    "build": "npm run build:client && npm run build:server",
     "start:server": "node server index.js"
   },
   "author": "parasha",

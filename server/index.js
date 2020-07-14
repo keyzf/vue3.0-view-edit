@@ -9,7 +9,7 @@ const { createBundleRenderer } = require('vue-server-renderer')
 const renderer = createBundleRenderer(resolve('../dist/vue-ssr-server-bundle.json'), {
   runInNewContext: false,
   template: fs.readFileSync(resolve('../build/server.template.html'), 'utf8'),
-  // 还要补一个客户端版本
+  clientManifest: require(resolve('../dist/vue-ssr-client-manifest.json'))
 })
 
 
