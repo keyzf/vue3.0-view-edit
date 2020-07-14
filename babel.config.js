@@ -11,6 +11,13 @@ module.exports = {
       ]
     ],
   plugins: [
-    "@babel/plugin-transform-arrow-functions"
+    "@babel/plugin-transform-arrow-functions",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
   ]
 };
