@@ -1,4 +1,4 @@
-const koaBody = require('koa-body');」
+const koaBody = require('koa-body');
 
 const allowOrigin = []
 
