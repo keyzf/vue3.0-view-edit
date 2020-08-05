@@ -1,12 +1,17 @@
-<template>vue3.0</template>
+<template>
+  <router-view></router-view>
+</template>
 
 <script>
 import { setup } from "vue";
 import { useStore } from "vuex";
+import { useRouter, useRoute } from "vue-router";
 export default {
   setup() {
     const store = useStore();
-    console.log("vue3.0 setup", store.state.active_tab);
+    const router = useRouter();
+    const route = useRoute();
+    console.log("vue3.0 setup", store.state.active_tab, route.path);
   },
 };
 </script>
