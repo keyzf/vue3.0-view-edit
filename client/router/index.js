@@ -1,21 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-
-Vue.use(Router)
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   
 ]
 
-function createRouter() {
-  const router = new Router({
-    mode: 'history',
-    // base: '/vue_demo_page/',
-    scrollBehavior: () => ({ y: 0 }),
-    routes,
-  })
 
-  return router;
-}
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
 
-export default createRouter;
+export default router;

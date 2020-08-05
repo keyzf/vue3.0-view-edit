@@ -1,18 +1,13 @@
-<template>
-  <div></div>
-</template>
+<template>vue3.0</template>
 
 <script>
+import { setup } from "vue";
+import { useStore } from "vuex";
 export default {
-  created: function() {
-    this.$post("http://localhost:3000/api/user/login?mp=123", {
-      username: "宁振宇",
-      card_sn: "211202199302101750",
-      card_type: 1,
-      mobile: "17710867821",
-      password: "123"
-    });
-  }
+  setup() {
+    const store = useStore();
+    console.log("vue3.0 setup", store.state.active_tab);
+  },
 };
 </script>
 
